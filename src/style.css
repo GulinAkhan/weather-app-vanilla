@@ -87,3 +87,9 @@ li:first-letter {
 .weather-forecast-temperature-max {
   color: #878787;
 }
+.search-button {
+  border-radius: 25px;
+}
+.location-button {
+  border-radius: 25px;
+}
