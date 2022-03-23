@@ -40,7 +40,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-              <div class="col-2">
+              <div class="col-2 forecast-style">
                 <div class="weather-forecast-date">${formatDay(
                   forecastDay.dt
                 )}</div>
@@ -49,7 +49,7 @@ function displayForecast(response) {
                     forecastDay.weather[0].icon
                   }@2x.png"
                   alt=""
-                  width="42"
+                  width="70"
                 />
                 <div class="weather-forecast-temperatures">
                   <span class="weather-forecast-temperature-max"> ${Math.round(
@@ -145,7 +145,7 @@ function showMyTemperature(response) {
   let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = Math.round(response.data.main.temp);
-  city.innerHTML = `Current Location: ${response.data.name}`;
+  city.innerHTML = `${response.data.name}`;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
